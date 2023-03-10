@@ -45,6 +45,13 @@ public class LoginServlet extends HttpServlet {
 
 	        try {
 				Connection cnx=ConnectionDB.getInstance();
+				// Check the username and password
+				
+		        if (username.equals("admin") && password.equals("admin")) {
+		            response.sendRedirect("home.jsp");
+		        } else {
+		            response.sendRedirect("login.jsp");
+		        }
 			} catch (ClassNotFoundException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -53,11 +60,7 @@ public class LoginServlet extends HttpServlet {
 				e.printStackTrace();
 			}	        
 	        
-	        // Check the username and password
-	        if (username.equals("admin") && password.equals("admin")) {
-	            response.sendRedirect("home.jsp");
-	        } else {
-	            response.sendRedirect("login.jsp");
-	        }	}
+	        
+	}
 
 }
