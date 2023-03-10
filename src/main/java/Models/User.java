@@ -2,7 +2,7 @@ package Models;
 
 public class User {
 
-	
+	private int idU;
 	private String username;
 	private String email;
 	private String password;
@@ -12,6 +12,13 @@ public class User {
 		email=e;
 		password=mp;
 		
+	}
+	
+	public int getId() {
+		return this.idU;
+	}
+	public void setId(int id) {
+		this.idU=id;
 	}
 	
 	public String getUsername() {

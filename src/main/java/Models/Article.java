@@ -11,7 +11,6 @@ public class Article {
 		title=t;
 		description=d;
 		content=c;
-		
 	}
 	
 	public String getTitle() {
